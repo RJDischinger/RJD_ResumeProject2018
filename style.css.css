@@ -1,0 +1,263 @@
+/* Normalize CSS */
+
+/***********************************************
+Styling for Images
+***********************************************/
+
+.img02 /* Header Logo */{
+  border-radius: 10%;
+  max-width: 200px;
+  padding: 1em;
+}
+
+.imgRJD {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+	border-radius: 20%;
+	max-width: 80px;
+}
+
+.imgSM /* Social Media Logos */{
+	max-width: 30px;
+  }
+
+.imgClip /* Icon Clip Art */ {
+   max-width: 20px;
+   }
+
+.coLogo /*  Company Logos */ {
+   max-width: 120px;
+   }   
+
+
+/* Set Contact Information*/
+
+/* Set section label style*/
+   
+/* Set List style */
+
+/* Hide detailed content until clicked*/
+ 
+
+
+/* Use Flexbox */
+
+/* ================================= 
+  Base Element Styles
+==================================== */
+ul {
+  list-style-type: none;
+}
+
+.main-header {
+  float:center;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+	color: rgb(0,0,255);
+}
+
+.email {
+  float:center;
+  font-size: 10px;
+  font-weight: normal;
+  font-family: "Georgia";
+	color: rgb(72, 72, 192);
+}
+
+.social-media {
+  float: center;
+  font-size: 5px;
+  font-weight: normal;
+  font-family: "Times New Roman";
+	color: rgb(0, 0, 0);
+}
+
+.body {
+	line-height: 1.6;
+	color: #3a3a3a;
+}
+
+.button {
+  background-color: rgb(8, 97, 10); /* Green */
+  border: none;
+  color: white;
+  padding: 5px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+}
+
+.job {
+	color: dark green;
+ 	padding: 5px 12px;
+	margin: 5px;	
+	background: lightyellow;
+	border-radius: 5px;
+}
+
+.container {
+  font-size: 15px;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(88, 14, 18);
+  text-align: center;
+}
+
+.main-footer{
+  font: italic bold 10px/30px Georgia, serif;
+  color: purple;
+  border-bottom: 1px solid red;
+}
+
+/*==================================
+    Hide Content till Clicked
+    then show details
+    ===============================*/
+.hide {
+  display: none;
+}
+
+/* ================================= 
+  Flexbox
+==================================== */
+
+.social-media{
+  flex-direction: row;
+	display: flex;
+  flex-wrap: wrap;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+/* Mobile Device Styling First*/
+/* Make text more readable for Mobile Screens*/
+/* Mobile first - up to 768px wide */
+@media screen and (max-width:320px) {
+  /* Delete images when screen is small
+    ===========*/
+  .img02 {
+  display: none;
+}
+  .imgRJD{
+    max-width: 60;
+  }
+  .main-header {
+   text-align: right;
+  }
+  .social-media {
+  display: none;
+}
+  .imgClip, imgName {
+  display: none;
+}
+.button {
+  margin: 0 auto; width: 200px; 
+  background-color: rgb(241, 231, 172);
+  border: none;
+  color: rgb(5, 5, 5);
+  padding: 3px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  font-size: 8px;
+}
+  .coLogo {
+  display: none;
+}
+  h1, li, p {
+    text-align: center;
+  }
+  .main-footer {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width:321px) and (max-width:768px) {
+  /* Show images as screen size increases
+    ===========*/
+  body {
+    background-color: rgb(300, 226, 182)
+  }    
+
+  .img02 {
+  display: none;
+  }
+  .main-header {
+    text-align: center;
+   }
+  .social-media {
+  display: row;
+  justify-content: center;
+  }
+ .imgClip, imgName {
+  display: none;
+  }
+  .coLogo {
+  display: none;
+  }
+}
+
+/* Tablet targetted size */
+@media screen and (min-width:769px) and (max-width:1024px) {
+  /* Show images as screen size increases
+    ===========*/
+  .container {
+  margin: auto;
+    width: 90%;
+    border: 3px solid green;
+    padding: 10px;
+    } 
+  .imgRJD {
+      max-width: 100;
+    }
+  body  { 
+      background-color: rgb(231, 226, 182)
+    }    
+  .imgClip {
+   max-width: 30px;
+   }
+  .cologo {
+   max-width: 100px;
+   }
+}
+/* Desktop size */
+@media screen and (min-width:1025px) {
+  .img02 {
+    max-width: 450;
+  }
+  .imgRJD {
+    max-width: 120;
+  }
+  body   { 
+    background-color: rgb(182, 202, 231) 
+  }
+  .imgClip {
+   max-width: 50px;
+   }
+  .cologo {
+   max-width: 150px;
+   }
+}
+
+/*************************
+Clearfix
+*************************/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
